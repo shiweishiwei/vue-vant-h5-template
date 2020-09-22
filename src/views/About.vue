@@ -3,10 +3,24 @@
     <div class="test-viewport-child">测试</div>
     <div class="correct">正确</div>
     <div class="wrong">错误</div>
+     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
+<script>
+import HelloWorld from 'components/HelloWorld.vue'
+
+export default {
+  name: 'Home',
+  components: {
+    HelloWorld
+  }
+}
+</script>
+
 <style lang="scss" scoped>
+@import 'assets/css/index.scss';
+
 .test-viewport {
   width: 750px;
   height: 400px;
