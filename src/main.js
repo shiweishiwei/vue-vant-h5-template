@@ -5,6 +5,8 @@ import store from './store'
 
 import 'assets/css/index.scss'
 
+require('./mock.js')
+
 Vue.config.productionTip = false
 
 new Vue({
