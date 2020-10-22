@@ -1,27 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import { routerMap } from './router.config.js'
+
+//封装路由跳转函数，添加跳转成功与失败回调
+const vueRouterPush = VueRouter.prototype.push
+VueRouter.prototype.push = (location, resolved = () => { }, rejected = () => { }) => vueRouterPush.call(this, location, resolved, rejected).catch(error => error)
 
 Vue.use(VueRouter)
 
-const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+const createRouter = () =>
+    new VueRouter({
+        scrollBehavior: () => ({ y: 0 }),
+        routes: routerMap
+    })
 
-const router = new VueRouter({
-  routes
-})
+const router = createRouter()
 
 export default router
