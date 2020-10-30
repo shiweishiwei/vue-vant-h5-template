@@ -1,8 +1,8 @@
-import instance from '@/request'
+import { instance } from '@/request/index.js'
 
-export function testGetData(url, params) {
+export function getCardListByUserId(params) {
     return instance({
-        url: url,
+        url: '/cardlist',
         method: 'get',
         params
     })
