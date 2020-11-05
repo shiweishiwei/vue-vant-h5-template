@@ -1,0 +1,27 @@
+@font-face{
+    font-family: "PF-R";
+    src:url("./PingFangRegular.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "PF-M";
+    src:url("./PingFangMedium.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "PF-S";
+    src:url("./PingFangSemibold.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "SFPRO-R";
+    src:url("./sf-pro-display_regular.woff.ttf");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 
 import 'assets/css/index.scss'
+import 'assets/font/font.css'
 // 全局引入按需引入UI库 vant
 import '@/plugins/vant'
 require('./mock.js')
